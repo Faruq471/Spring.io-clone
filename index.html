@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/edf0578f75.js" crossorigin="anonymous"></script>
+  <style>
+    .parent {
+      background: linear-gradient(rgb(109, 179, 62), white, rgb(129, 235, 110));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 590px;
+    }
+
+    body {
+      height: 4000px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+
+    nav .nav1 {
+      background-color: rgb(109, 179, 62);
+    }
+
+    nav .nav1 p {
+      font-family: "open sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 40px;
+      text-align: center;
+      color: white;
+    }
+
+    nav .nav1 p span {
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    nav .nav2 img {
+      width: 170px;
+      /* height: 100px; */
+      position: relative;
+      left: 100px;
+    }
+
+    nav .nav2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav .nav2 ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav .nav2 ul li {
+      padding: 20px 30px;
+      line-height: 22.8px;
+    }
+
+    nav .nav2 ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 15.2px;
+      font-weight: bolder;
+      font-family: sans-serif;
+    }
+
+    nav .nav2 {
+      background-color: white;
+    }
+
+    .textparent {
+      /* position: relative;
+        top: 30%;
+        left: 50%;  */
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .textparent h1 p {
+      font-family: "roboto";
+      font-size: 60.8px;
+      font-weight: 500;
+    }
+
+    .button button {
+      padding: 15px 30px;
+      font-family: "open sans";
+      font-size: 14.4px;
+      font-weight: 700;
+      border: 2px solid black;
+      background-color: transparent;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .button button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .whyspring {
+      margin-right: 4px;
+    }
+
+    .QS {
+      margin-left: 4px;
+    }
+
+    .bigdrop {
+      background-color: white;
+      width: 250px;
+      padding: 10px;
+      display: none;
+      position: absolute;
+      border-radius: 0 0 5px 5px;
+      border: none;
+      outline: none;
+    }
+
+    .dropparent {
+      position: relative;
+    }
+
+    .dropparent:hover .bigdrop {
+      display: block;
+    }
+
+    .dropparent .bigdrop p:hover {
+      color: green;
+    }
+
+    .dropparent .bigdrop p {
+      padding: 10px;
+      font-family: "open sans";
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .dropparent .bigdrop p span {
+      color: blue;
+    }
+
+    .footer1 {
+      position: relative;
+      bottom: 0;
+      top: 100px;
+      text-align: center;
+      background-color: white;
+      line-height: 27.2px;
+      padding: 20px;
+      border-bottom: 1px solid lightseagreen;
+    }
+
+    /* .footer1 div{
+        text-align: center;
+       } */
+    .part2 h1 {
+      font-family: sans-serif;
+      font-size: 40px;
+      font-style: 500;
+      line-height: 27.2px;
+      padding: 70px;
+    }
+
+    .uppersecsparent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .sec1 {
+      background-color: white;
+      border: none;
+      outline: none;
+      visibility: visible;
+      width: 280px;
+      height: 350px;
+      position: relative;
+      left: 90px;
+      border: 1.5px solid  rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec1:hover {
+      /* transform: scale(1.05); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .sec2 {
+      background-color: white;
+      width: 280px;
+      height: 350px;
+      border: 1.5px solid  rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec2:hover {
+      /* transform: scale(1.05); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .sec3 {
+      background-color: white;
+      width: 280px;
+      height: 350px;
+      position: relative;
+      right: 90px;
+      border: 1.5px solid rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec3:hover {
+      /* transform: scale(1.05); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .lowersecsparent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      top: 23px;
+    }
+
+    .sec4 {
+      background-color: white;
+      width: 280px;
+      height: 350px;
+      position: relative;
+      left: 90px;
+      border: 1.5px solid rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec4:hover {
+      /* transform: scale(1.05); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .sec5 {
+      background-color: white;
+      width: 280px;
+      height: 350px;
+      border: 1.5px solid rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec5:hover {
+      /* transform: scale(1.05); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .sec6 {
+      background-color: white;
+      width: 280px;
+      height: 350px;
+      position: relative;
+      right: 90px;
+      border: 1.5px solid  rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec6:hover {
+      /* transform: scale(1.05); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .lastsecparent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sec7 {
+      background-color: white;
+      width: 260px;
+      height: 350px;
+      position: relative;
+      top: 23px;
+      margin-top: 23px;
+      border: 1.5px solid rgb(232, 239, 239);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .sec7:hover {
+      /* transform: scale(1.07); */
+      transform: translateY(-10px);
+      border: 2px solid rgb(216, 232, 232);
+      box-shadow: 0 0 5px  rgb(198, 200, 200);
+    }
+
+    .secsparent img {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      left: 90px;
+      top: 20px;
+
+    }
+
+    .secsparent h1 {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .secsparent p {
+      margin: auto;
+      width: 150px;
+      text-align: center;
+      font-family: "work sans";
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 27.2px;
+    }
+
+    .box .box1 {
+      width: 530px;
+      height: 330px;
+      background-color: rgb(25, 30, 30);
+      border-radius: 5px;
+      margin-left: 70px;
+
+    }
+
+    .box {
+      position: relative;
+      top: 120px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .box .span1 {
+      text-align: center;
+      width: 400px;
+      font-family: "open sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27.2px;
+      margin-right: 50px;
+      margin-bottom: 130px;
+    }
+
+    .box .span1 h1 {
+      padding: 20px;
+    }
+
+    .box1 {
+      padding: 60px 50px 50px 70px;
+      font-family: "inconsolata";
+      font-size: 14.4px;
+      font-weight: 400;
+      line-height: 21.6px;
+    }
+
+    .box1 .span2 {
+      color: rgb(134, 216, 235);
+    }
+
+    .box1 .span3 {
+      color: rgb(86, 227, 121);
+    }
+
+    .box1 .span4 {
+      color: rgb(212, 240, 137);
+    }
+
+    .box1 .span5 {
+      color: white;
+    }
+
+    .quote {
+      position: relative;
+    }
+
+    .quote .im1 {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 200px;
+      left: 550px;
+    }
+
+    .quote p {
+      position: absolute;
+      top: 300px;
+      text-align: center;
+      width: 78%;
+      margin-left: 120px;
+      color: rgb(88, 145, 51);
+      font-family: sans-serif;
+      font-size: 24px;
+      font-weight: bolder;
+      line-height: 36.8px;
+    }
+
+    .quote .im2 {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 480px;
+      left: 380px;
+      border-radius: 100%;
+    }
+
+    .quote .quote2 .paul {
+      position: absolute;
+      top: 490px;
+      left: 70px;
+      color: black;
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .main3 {
+      position: relative;
+      top: 670px;
+    }
+
+    .main3 .part3 {
+      position: relative;
+      /* top:700px; */
+      display: flex;
+      /* margin-left: 100px;
+      margin-right: 100px; */
+      font-family: "open sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 27.2px;
+      background-color: rgb(235, 242, 242);
+      padding: 100px;
+      overflow: hidden;
+    }
+
+    .part3 .ahead {
+      width: 25%;
+      margin-right: 50px;
+    }
+
+    .part3 .support {
+      width: 30%;
+
+    }
+
+    .part3 .events {
+      width: 25%;
+      margin-left: 50px;
+    }
+
+    .part3 .s3 {
+      color: rgb(8, 108, 201);
+      cursor: pointer;
+
+    }
+
+    .part3 .ahead .s3:hover {
+      border-bottom: 2px solid rgb(8, 108, 201);
+    }
+
+    .part3 .support .s3:hover {
+      border-bottom: 2px solid rgb(8, 108, 201);
+    }
+
+    .part3 .events .s3:hover {
+      border-bottom: 2px solid rgb(8, 108, 201);
+    }
+
+    .part3 .empty {
+      width: 350px;
+      height: 350px;
+      border-radius: 100%;
+      position: absolute;
+      bottom: -130px;
+      right: -130px;
+      /* top: 60px; */
+      background-color: rgb(109, 179, 62);
+    }
+
+    .liisting {
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+      /* padding: 80px 100px; */
+      font-family: "open sans";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      width: 90%;
+    }
+
+    .general {
+      margin-left: 100px;
+      margin-top: 60px;
+    }
+
+    .liisting ul li {
+      padding: 0 0 8px 0;
+    }
+
+    .liisting ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bolder;
+    }
+
+    .subscribeparent {
+      width: 400px;
+      height: 200px;
+      /* background-color: grey; */
+      border: 2px solid rgb(216, 232, 232);
+      padding: 25px;
+    }
+
+    .subscribeparent button {
+      padding: 17px 20px;
+      border: 2px solid black;
+      background-color: transparent;
+    }
+
+    .subscribeparent button:hover {
+      background-color: black;
+      color: white;
+
+    }
+    .downpart{
+      position: relative;
+      margin: 50px 100px;
+    }
+    .downpart .downimg{
+      width: 170px;
+    }
+    .downpart  .fa-brands{
+      font-size: 25px;
+      border: 1px solid rgb(186, 185, 185); 
+      border-radius: 100%;
+      padding: 7px;
+      background-color: rgb(186, 185, 185);
+      margin: 10px;
+    }
+    
+    .imcons{
+      display: flex;
+      justify-content: space-between;
+       align-items: center;
+    }
+    .upperwords{
+      padding-top: 10px;
+    }
+    .words{
+      font-family: "open sans";
+      font-size: 12.8px;
+      font-weight: 400;
+      line-height: 19.2px;
+      
+    }
+    .lowerwords{
+      padding-top: 15px;
+      color: rgb(181, 181, 189);
+      width: 75%;
+    } 
+    
+  </style>
+</head>
+
+<body>
+  <main class="main1">
+    <div class="parent">
+      <div class="master">
+        <nav>
+          <div class="nav1">
+            <p>
+              <span>SpringOne</span> 2024 will be virtual and free to <span>register.</span>
+            </p>
+          </div>
+          <div class="nav2">
+            <img src="https://miro.medium.com/v2/resize:fit:1358/1*5Ou07zVJEqtbfbG6f0kaSA.png">
+            <ul>
+              <div class="dropparent">
+                <li><a href="#">Why Spring </a></li>
+                <div class="bigdrop">
+                  <p>Overview</p>
+                  <p>Microservices</p>
+                  <p>Reactive</p>
+                  <p>Event Driven</p>
+                  <p>Cloud</p>
+                  <p>Web Applications</p>
+                  <p>Serverless</p>
+                  <p>Batch</p>
+                </div>
+              </div>
+              <div class="dropparent">
+                <li><a href="#">Learn </a></li>
+                <div class="bigdrop">
+                  <p>Overview</p>
+                  <p>Quickstart</p>
+                  <p>Guides</p>
+                  <p>Blog</p>
+                </div>
+              </div>
+              <div class="dropparent">
+                <li><a href="#">Projects </a></li>
+                <div class="bigdrop">
+                  <p>Overview</p>
+                  <p>Spring Boot</p>
+                  <p>Spring Framework</p>
+                  <p>Spring Cloud</p>
+                  <p>Spring Cloud Data Flow</p>
+                  <p>Spring Data</p>
+                  <p>Spring Integration</p>
+                  <p>Spring Batch</p>
+                  <p>Spring Security</p>
+                  <p><span>View all projects</span></p>
+                  <br>
+                  <p>DEVELOPMENT TOOLS</p>
+                </div>
+              </div>
+              <div class="dropparent">
+                <li><a href="#">Academy </a></li>
+                <div class="bigdrop">
+                  <p>Courses</p>
+                  <p>Get Certified</p>
+                </div>
+              </div>
+              <div class="dropparent">
+                <li><a href="#">Solutions </a></li>
+                <div class="bigdrop">
+                  <p>Overview</p>
+                  <p>Tanzu Spring</p>
+                  <p>Spring Consulting</p>
+                  <p>Spring Cloud</p>
+                  <p>Spring Academy For Teams</p>
+                  <p>Security Advisories</p>
+                </div>
+              </div>
+              <div class="dropparent">
+                <li><a href="#">Community </a></li>
+                <div class="bigdrop">
+                  <p>Overview</p>
+                  <p>Events</p>
+                  <p>Teams</p>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </nav>
+        <div class="textparent">
+          <div class="text">
+            <h1>
+              <p> Spring makes Java</p>
+              <p> simple.</p>
+          </div>
+          </h1>
+          <div class="button">
+            <button class="whyspring">WHY SPRING</button>
+            <button class="QS">QUICK START</button>
+          </div>
+        </div>
+        <div class="footer1">
+          <div class="footer1child"><button class="new">New</button>
+            <span>|</span>
+            <span>State of Spring Survey Results 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <main class="main2">
+    <div class="part2">
+      <h1>What Spring can do</h1>
+    </div>
+    <div class="secsparent">
+      <div class="uppersecsparent">
+        <section class="sec1">
+          <img src="C:\Users\USER\Desktop\BEKE\01.svg" alt="">
+          <div>
+            <h1>Microservices</h1>
+            <p>Quickly deliver</p>
+            <p>production‑grade</p>
+            <p>features with</p>
+            <p>independently</p>
+            <p>evolvable microservices.
+            </p>
+          </div>
+        </section>
+        <section class="sec2">
+          <img src="C:\Users\USER\Desktop\BEKE\02.svg" alt="">
+          <div>
+            <h1>Reactive</h1>
+            <p>Spring's asynchronous, nonblocking architecture means you can get more from your resources. </p>
+          </div>
+        </section>
+        <section class="sec3">
+          <img src="C:\Users\USER\Desktop\BEKE\03.svg" alt="">
+          <div>
+            <h1>Cloud</h1>
+            <p class="p1">Your code, any cloud—we’ve got you covered. Connect and scale your services, whatever your
+              platform.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="lowersecsparent">
+        <section class="sec4">
+          <img src="C:\Users\USER\Desktop\BEKE\04.svg" alt="">
+          <div>
+            <h1>Web apps</h1>
+            <p>Frameworks for fast, secure, and responsive web applications connected to any data store. </p>
+          </div>
+        </section>
+        <section class="sec5">
+          <img src="C:\Users\USER\Desktop\BEKE\05.svg" alt="">
+          <div>
+            <h1>Serverless</h1>
+            <p>The ultimate flexibility. Scale up on demand and scale to zero when there’s no demand.
+            </p>
+          </div>
+        </section>
+        <section class="sec6">
+          <img src="C:\Users\USER\Desktop\BEKE\06.svg" alt="">
+          <div>
+            <h1>Event Driven</h1>
+            <p>Integrate with your enterprise. React to business events. Act on your streaming data in realtime.
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="lastsecparent">
+        <section class="sec7">
+          <img src="C:\Users\USER\Desktop\BEKE\07.svg" alt="">
+          <div>
+            <h1>Batch</h1>
+            <p>Automated tasks. Offline processing of data at a time to suit you.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box1">
+        <p> <span class="span2">@SpringBootApplication </span></p>
+        <p> <span class="span2">@RestController </span></p>
+        <p> <span class="span3"> public class DemoApplication {</span></p>
+        <br>
+        <p> <span class="span2">@GetMapping("/helloworld") </span></p>
+        <p> <span class="span3">public String hello() { </span></p>
+        <p> <span class="span4">return"Hello World!";</span></p>
+        <br>
+        <p> <span class="span5">}</span></p>
+        <br>
+        <p> <span class="span5">}</span></p>
+      </div>
+      <span class="span1">
+        <h1>Level up your Java™ code</h1>
+        <p>With Spring Boot in your app, just a few lines of code is all you need to start building services like a
+          boss.</p>
+        <br>
+        <p>New to Spring? Try our simple quickstart guide.</p>
+      </span>
+    </div>
+    <div class="quote">
+      <img src="C:\Users\USER\Desktop\BEKE\quote.svg" alt="" class="im1">
+      <p>
+        Most [of our] services today are all based on Spring Boot. I think the most important thing is that [Spring] has
+        just been very well maintained over the years...that is important for us for the long term because we don’t want
+        to be switching to a new framework every two years.
+      </p>
+      <div class="quote2">
+        <img src="C:\Users\USER\Desktop\BEKE\bakker-120.jpg" alt="" class="im2">
+        <p class="paul">Paul Bakker, Senior Software Engineer, Netflix</p>
+      </div>
+    </div>
+  </main>
+  <main class="main3">
+    <div class="part3">
+      <div class="ahead">
+        <h2>Get ahead</h2>
+        <p>VMware offers training and certification to turbo-charge your progress.
+        <p> <span class="s3">Learn more</span> </p>
+        </p>
+      </div>
+      <div class="support">
+        <h2>Get support</h2>
+        <p>Tanzu Spring offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription.
+        <p> <span class="s3">Learn more</span></p>
+        </p>
+      </div>
+      <div class="events">
+        <h2>Upcoming events </h2>
+        <p>Check out all the upcoming events in the Spring community.
+
+        <p> <span class="s3"> View all</span></p>
+        </p>
+      </div>
+      <div class="empty"></div>
+    </div>
+    <div class="general">
+      <div class="liisting">
+        <div class="whysp">
+          <ul>
+            <li><a href="#">Why Spring</a></li>
+            <li>Microservices</li>
+            <li>Reactive</li>
+            <li>Event Driven</li>
+            <li>Cloud</li>
+            <li>Web <p> Applications</p>
+            </li>
+            <li>Serverless</li>
+            <li>Batch</li>
+          </ul>
+        </div>
+        <div class="learn">
+          <ul>
+            <li><a href="#">Quickstart</a></li>
+            <li>Guides</li>
+            <li>Blog</li>
+            <li><a href="#">Community</a></li>
+            <li>Events</li>
+            <li>Team</li>
+          </ul>
+        </div>
+        <div class="solutions">
+          <ul>
+            <li><a href="#">Solutions</a></li>
+            <li>Tanzu Spring</li>
+            <li>Spring Consulting</li>
+            <li>Spring Academy <p>for teams</p>
+            </li>
+            <li>Spring Advisories</li>
+          </ul>
+        </div>
+        <div class="projects">
+          <ul>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Training</a></li>
+            <br>
+            <li><a href="#">Thank You</a></li>
+          </ul>
+        </div>
+        <div class="subscribeparent">
+          <h2>Get the Spring newsletter</h2>
+          <br>
+          <p>Stay connected with the Spring newsletter</p>
+          <br>
+          <p><button>SUBSCRIBE</button></p>
+        </div>
+      </div>
+       </div>
+    <div class="downpart">
+      <div class="imcons">
+      <img src="https://miro.medium.com/v2/resize:fit:1358/1*5Ou07zVJEqtbfbG6f0kaSA.png" alt="" class="downimg">
+       <div class="icons">
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-github"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+    </div>
+    </div>
+      <div class="words">
+        <div class="upperwords">
+        <p>Copyright © 2005 - 2024 Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.</p>
+       <p>Terms of Use • Privacy • Trademark Guidelines • Your California Privacy Rights</p>
+      </div>
+      <div class="lowerwords">
+        <p>
+          Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners. 
+        </p>
+      </div>
+      </div>
+    </div>
+  </main>
+ 
+  </body>
+
+</html>
